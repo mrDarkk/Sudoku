@@ -11,32 +11,6 @@ var board = [
 
 ];
 
-
-function validRow(board) {
-    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let x = 0
-    for (var i = 0; i < 9; i++) {
-        for (var j = 0; j < 9; j++) {
-            // for(var)
-            // console.log(arr[i]);
-            if (board[i][j] === 1) {
-                //console.log([i, j]);
-                x++;
-            }
-
-            // return [i, j];
-
-        }
-
-
-    }
-
-    // return [-1, -1];
-    console.log(x);
-    return x;
-}
-
-
 const isValidSudoku = (board) => {
     const obj = {
         rows: {}, // 9 rows, each containing 9 cells across
@@ -102,9 +76,6 @@ const isValidSudoku = (board) => {
     return isValid;
 };
 
-// if row = 8 & column = 5
-// then quotients = 2, 1
-// therefore blockNumber = 8
 const getBlockNumber = (row, column) => {
     const rowQuotient = parseInt(row / 3, 10);
     const columnQuotient = parseInt(column / 3, 10);
@@ -230,22 +201,10 @@ function solve(board) {
 }
 
 
-
-//console.log(solve(board));
-//console.log(validRow(board));
-//const o = validRow(board);
-// console.log(o);
-
-//console.log(isValidSudoku(board));
+console.log(isValidSudoku(board));
 
 if (isValidSudoku(board) == true) {
     console.log(solve(board));
 } else {
     console.log("invalid sudoku !!!")
 }
-
-// if (5 > o) {
-//     console.log(solve(board));
-// } else {
-//     console.log("invaild sudoku please check !!!");
-// }
