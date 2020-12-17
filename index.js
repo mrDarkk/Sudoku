@@ -11,6 +11,29 @@ var board = [
 
 ];
 
+
+function validRow(board) {
+    let x = 0
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++) {
+            if (board[i][j] === 1) {
+                //console.log([i, j]);
+                x++;
+            }
+
+            // return [i, j];
+
+        }
+
+
+    }
+
+    // return [-1, -1];
+    // console.log(x);
+    return x;
+}
+
+
 function nextEmptySpot(board) {
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 9; j++) {
@@ -31,6 +54,7 @@ function checkRow(board, row, value) {
 
     return true;
 }
+
 
 function checkColumn(board, column, value) {
     for (var i = 0; i < board.length; i++) {
@@ -73,12 +97,14 @@ function solve(board) {
     let row = emptySpot[0];
     let col = emptySpot[1];
 
+
     // there is no more empty spots
     if (row === -1) {
         return board;
     }
 
     for (let num = 1; num <= 9; num++) {
+
         if (checkValue(board, row, col, num)) {
             board[row][col] = num;
             solve(board);
@@ -93,4 +119,15 @@ function solve(board) {
 }
 
 
-console.log(solve(board));
+
+//console.log(solve(board));
+//console.log(validRow(board));
+const o = validRow(board);
+console.log(o);
+
+if (5 > o) {
+    console.log(solve(board));
+} else {
+    console.log("invaild");
+}
+
