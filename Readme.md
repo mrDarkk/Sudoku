@@ -1,15 +1,5 @@
-# Milestone-2: SUDOKU
+# SUDOKU
 
-## Learning Competencies
-At the end of this milestone you will learn
- - Understanding object-oriented Javascript
- - How to make your code DRY (Don't Repeat Yourself)
- - Understanding Asynchronous programming
- - How to Debug effectively
- - Importance of pair programing
- - getting used to external resources like stackoverflow, MDN and other docs
-
-A video on how Sudoku works: [click to watch](https://youtu.be/OtKxtvMUahA)
 
 ## Problem Statement
 
